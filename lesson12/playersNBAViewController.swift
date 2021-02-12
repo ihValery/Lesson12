@@ -38,7 +38,7 @@ class playersNBAViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerNBA", for: indexPath)
         
         cell.textLabel?.text = playerNBA[indexPath.row]
-        cell.textLabel?.numberOfLines = 0                               //Сняли ограничение на количество строк в Label
+        //cell.textLabel?.numberOfLines = 0                               //Сняли ограничение на количество строк в Label
         cell.imageView?.image = UIImage(named: playerNBA[indexPath.row])
         
         return cell
@@ -53,7 +53,7 @@ class playersNBAViewController: UITableViewController {
     // Получить новый контроллер представления, используя переход.место назначения.
     // Передать выбранный объект новому контроллеру вида.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //indexPathForSelectedRow берет индек у выделенной ячейки (опционал)
+        //indexPathForSelectedRow берет индекc у выделенной ячейки (опционал)
         if let indexPath = tableView.indexPathForSelectedRow {
             if segue.identifier == "goToAbout" {
                 let aboutVC = segue.destination as? AboutVC
@@ -73,6 +73,7 @@ class playersNBAViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return.none
     }
+    
 
     /*
     // Override to support conditional editing of the table view.
