@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80CCF43725D6A4E200680E0C /* playersNBAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF43625D6A4E200680E0C /* playersNBAViewController.swift */; };
+		80CCF43A25D6BAF400680E0C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF43925D6BAF400680E0C /* AboutVC.swift */; };
 		80DE1AD125D690BF00059E3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE1AD025D690BF00059E3E /* AppDelegate.swift */; };
 		80DE1AD325D690BF00059E3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE1AD225D690BF00059E3E /* SceneDelegate.swift */; };
-		80DE1AD525D690BF00059E3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE1AD425D690BF00059E3E /* ViewController.swift */; };
 		80DE1AD825D690BF00059E3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DE1AD625D690BF00059E3E /* Main.storyboard */; };
 		80DE1ADA25D690C000059E3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80DE1AD925D690C000059E3E /* Assets.xcassets */; };
 		80DE1ADD25D690C000059E3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DE1ADB25D690C000059E3E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80CCF43625D6A4E200680E0C /* playersNBAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playersNBAViewController.swift; sourceTree = "<group>"; };
+		80CCF43925D6BAF400680E0C /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		80DE1ACD25D690BF00059E3E /* lesson12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lesson12.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80DE1AD025D690BF00059E3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80DE1AD225D690BF00059E3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		80DE1AD425D690BF00059E3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		80DE1AD725D690BF00059E3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80DE1AD925D690C000059E3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80DE1ADC25D690C000059E3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		804F000825D706A600513EC5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				80CCF43625D6A4E200680E0C /* playersNBAViewController.swift */,
+				80CCF43925D6BAF400680E0C /* AboutVC.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		804F000A25D706D900513EC5 /* system32 */ = {
+			isa = PBXGroup;
+			children = (
+				80DE1ADE25D690C000059E3E /* Info.plist */,
+				80DE1ADB25D690C000059E3E /* LaunchScreen.storyboard */,
+				80DE1AD925D690C000059E3E /* Assets.xcassets */,
+				80DE1AD225D690BF00059E3E /* SceneDelegate.swift */,
+				80DE1AD025D690BF00059E3E /* AppDelegate.swift */,
+			);
+			path = system32;
+			sourceTree = "<group>";
+		};
 		80DE1AC425D690BF00059E3E = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +79,9 @@
 		80DE1ACF25D690BF00059E3E /* lesson12 */ = {
 			isa = PBXGroup;
 			children = (
-				80DE1AD025D690BF00059E3E /* AppDelegate.swift */,
-				80DE1AD225D690BF00059E3E /* SceneDelegate.swift */,
-				80DE1AD425D690BF00059E3E /* ViewController.swift */,
 				80DE1AD625D690BF00059E3E /* Main.storyboard */,
-				80DE1AD925D690C000059E3E /* Assets.xcassets */,
-				80DE1ADB25D690C000059E3E /* LaunchScreen.storyboard */,
-				80DE1ADE25D690C000059E3E /* Info.plist */,
+				804F000825D706A600513EC5 /* ViewController */,
+				804F000A25D706D900513EC5 /* system32 */,
 			);
 			path = lesson12;
 			sourceTree = "<group>";
@@ -137,7 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80DE1AD525D690BF00059E3E /* ViewController.swift in Sources */,
+				80CCF43A25D6BAF400680E0C /* AboutVC.swift in Sources */,
+				80CCF43725D6A4E200680E0C /* playersNBAViewController.swift in Sources */,
 				80DE1AD125D690BF00059E3E /* AppDelegate.swift in Sources */,
 				80DE1AD325D690BF00059E3E /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +308,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 879U287R5Q;
-				INFOPLIST_FILE = lesson12/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/lesson12/system32/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 879U287R5Q;
-				INFOPLIST_FILE = lesson12/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/lesson12/system32/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
