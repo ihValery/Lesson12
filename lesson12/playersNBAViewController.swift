@@ -9,19 +9,18 @@ import UIKit
 
 class playersNBAViewController: UITableViewController {
     
-    let playerNBA = ["ADEBAYO BAM", "ANTETOKOUNMPO GIANNIS", "BEAL BRADLEY", "BROWN JAYLEN", "BUTLER JIMMY",
+    var playerNBA = ["ADEBAYO BAM", "ANTETOKOUNMPO GIANNIS", "BEAL BRADLEY", "BROWN JAYLEN", "BUTLER JIMMY",
                      "DURANT KEVIN", "EMBIID JOEL", "GRANT JERAMI", "HARDEN JAMES", "HAYWARD GORDON",
                      "IRVING KYRIE", "LAVINE ZACH", "RANDLE JULIUS", "ROSE DERRICK", "SABONIS DOMANTAS",
                      "SEXTON COLLIN", "SIMMONS BEN", "TATUM JAYSON", "WESTBROOK RUSSELL", "YOUNG TRAE"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Выбор между презентациями
-        // self.clearsSelectionOnViewWillAppear = false
-
+        
+        playerNBA.shuffle()
+        
         // Отобразить кнопку Редактирования на панели навигации для этого контроллера вида.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     //Позволяет задать количество секций (серенькие)
@@ -61,6 +60,18 @@ class playersNBAViewController: UITableViewController {
                 aboutVC?.playerName = playerNBA[indexPath.row]
             }
         }
+    }
+    
+    //Метод для перетаскивания ячеек. sourceIndexPath - откуда удаляем. destinationIndexPath - строка назначения, куда.
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let currentPlayer = playerNBA.remove(at: sourceIndexPath.row)
+        playerNBA.insert(currentPlayer, at: destinationIndexPath.row)
+        tableView.reloadData()                                                  //перезагрузка таблицы (что бы результат был виден)
+    }
+        
+    //Для стиля (удаляем delete)  <- )))))
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return.none
     }
 
     /*
