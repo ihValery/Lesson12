@@ -1,24 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JdW-WA-Rgd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--All Star NBA 2021-->
+        <scene sceneID="JgI-dI-Hsl">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController storyboardIdentifier="AboutSB" id="3Z0-Pq-94C" customClass="playersNBAViewController" customModule="lesson12" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qPh-B3-jNU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="playerNBA" id="cCa-y2-NmX">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cCa-y2-NmX" id="wcN-w9-xzI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="QNK-37-kv1" kind="show" identifier="goToAbout" id="okl-bn-BSE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Z0-Pq-94C" id="mlO-zQ-G2g"/>
+                            <outlet property="delegate" destination="3Z0-Pq-94C" id="LQQ-cQ-vkh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="All Star NBA 2021" id="Uw9-Z6-Sk1"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7RZ-Cw-mW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="488" y="38"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="jtW-Nt-PSs">
+            <objects>
+                <viewController id="QNK-37-kv1" customClass="AboutVC" customModule="lesson12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cx5-l7-uzA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mdc-iU-sBh">
+                                <rect key="frame" x="25" y="113" width="364" height="295"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="364" id="3nW-jU-aLZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIn-Ha-F9b">
+                                <rect key="frame" x="25" y="433" width="364" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allStarLogo" translatesAutoresizingMaskIntoConstraints="NO" id="p2C-Ef-8of">
+                                <rect key="frame" x="308" y="113" width="81" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="fbI-2P-jB4"/>
+                                    <constraint firstAttribute="height" constant="81" id="i2t-fu-FEj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Sbb-lH-Fcd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sbb-lH-Fcd" firstAttribute="bottom" secondItem="lIn-Ha-F9b" secondAttribute="bottom" constant="399" id="1ZT-yp-Cm5"/>
+                            <constraint firstItem="Sbb-lH-Fcd" firstAttribute="trailing" secondItem="lIn-Ha-F9b" secondAttribute="trailing" constant="25" id="7OF-Tb-y4s"/>
+                            <constraint firstItem="mdc-iU-sBh" firstAttribute="leading" secondItem="Sbb-lH-Fcd" secondAttribute="leading" constant="25" id="W01-Kl-aCO"/>
+                            <constraint firstItem="lIn-Ha-F9b" firstAttribute="leading" secondItem="Sbb-lH-Fcd" secondAttribute="leading" constant="25" id="glD-uI-Zn7"/>
+                            <constraint firstItem="lIn-Ha-F9b" firstAttribute="top" secondItem="mdc-iU-sBh" secondAttribute="bottom" constant="25" id="nFP-CM-obq"/>
+                            <constraint firstItem="p2C-Ef-8of" firstAttribute="top" secondItem="Sbb-lH-Fcd" secondAttribute="top" constant="25" id="vku-B9-rEn"/>
+                            <constraint firstItem="Sbb-lH-Fcd" firstAttribute="trailing" secondItem="mdc-iU-sBh" secondAttribute="trailing" constant="25" id="wxi-tW-e1v"/>
+                            <constraint firstItem="Sbb-lH-Fcd" firstAttribute="trailing" secondItem="p2C-Ef-8of" secondAttribute="trailing" constant="25" id="yLb-aL-NEH"/>
+                            <constraint firstItem="mdc-iU-sBh" firstAttribute="top" secondItem="Sbb-lH-Fcd" secondAttribute="top" constant="25" id="ykx-Ip-YlR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="ZgQ-wm-VlG"/>
+                    <connections>
+                        <outlet property="fotoPlayer" destination="mdc-iU-sBh" id="QYf-7c-AuN"/>
+                        <outlet property="labelPlayer" destination="lIn-Ha-F9b" id="F9v-Wn-hxM"/>
+                        <outlet property="teamLogo" destination="p2C-Ef-8of" id="TY9-Pj-d1V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXt-ya-Z6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1240.5797101449277" y="37.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uNs-hT-CBr">
+            <objects>
+                <navigationController id="JdW-WA-Rgd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jXn-np-Oe5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Z0-Pq-94C" kind="relationship" relationship="rootViewController" id="YIk-dM-dfg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ofs-b4-A0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277" y="38"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="allStarLogo" width="504" height="198"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
