@@ -32,9 +32,6 @@ class AboutVC: UIViewController {
         labelPlayer.text = playerName
         labelPlayer.numberOfLines = 0
         
-        let attributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 8)!]
-        UINavigationBar.appearance().titleTextAttributes = attributes
-        
-        title = playerName
+        //title = playerName
     }
 }

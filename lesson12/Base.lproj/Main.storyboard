@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Star NBA-->
+        <!--Persons list-->
         <scene sceneID="JgI-dI-Hsl">
             <objects>
                 <tableViewController storyboardIdentifier="AboutSB" id="3Z0-Pq-94C" customClass="playersNBAViewController" customModule="lesson12" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                             <outlet property="delegate" destination="3Z0-Pq-94C" id="LQQ-cQ-vkh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Star NBA" largeTitleDisplayMode="always" id="Uw9-Z6-Sk1"/>
+                    <navigationItem key="navigationItem" title="Persons list" largeTitleDisplayMode="always" id="Uw9-Z6-Sk1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7RZ-Cw-mW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,49 +48,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mdc-iU-sBh">
-                                <rect key="frame" x="25" y="140" width="340" height="216"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="1PQ-lK-ctk"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIn-Ha-F9b">
                                 <rect key="frame" x="25" y="381" width="340" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2C-Ef-8of">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cyx-w3-oxN">
+                                <rect key="frame" x="25" y="140" width="340" height="216"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gqD-Jy-jJS">
                                 <rect key="frame" x="284" y="140" width="81" height="81"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="81" id="fbI-2P-jB4"/>
-                                    <constraint firstAttribute="height" constant="81" id="i2t-fu-FEj"/>
+                                    <constraint firstAttribute="height" constant="81" id="EbH-pt-A5c"/>
+                                    <constraint firstAttribute="width" constant="81" id="y0i-Ob-IBL"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sbb-lH-Fcd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mdc-iU-sBh" firstAttribute="leading" secondItem="lIn-Ha-F9b" secondAttribute="leading" id="2Tb-hD-W9x"/>
                             <constraint firstItem="Sbb-lH-Fcd" firstAttribute="trailing" secondItem="lIn-Ha-F9b" secondAttribute="trailing" constant="25" id="7OF-Tb-y4s"/>
-                            <constraint firstItem="mdc-iU-sBh" firstAttribute="top" secondItem="Sbb-lH-Fcd" secondAttribute="top" id="8ip-gz-SH4"/>
-                            <constraint firstItem="mdc-iU-sBh" firstAttribute="width" secondItem="cx5-l7-uzA" secondAttribute="height" multiplier="85:211" id="S3f-5W-Y0v"/>
-                            <constraint firstItem="lIn-Ha-F9b" firstAttribute="top" secondItem="mdc-iU-sBh" secondAttribute="bottom" constant="25" id="fH3-Js-YIe"/>
+                            <constraint firstItem="Cyx-w3-oxN" firstAttribute="leading" secondItem="Sbb-lH-Fcd" secondAttribute="leading" constant="25" id="F2i-G1-6GO"/>
+                            <constraint firstItem="Cyx-w3-oxN" firstAttribute="top" secondItem="Sbb-lH-Fcd" secondAttribute="top" id="FIe-GI-1Zf"/>
+                            <constraint firstItem="lIn-Ha-F9b" firstAttribute="top" secondItem="Cyx-w3-oxN" secondAttribute="bottom" constant="25" id="GXW-HO-cLY"/>
+                            <constraint firstItem="Sbb-lH-Fcd" firstAttribute="bottom" secondItem="lIn-Ha-F9b" secondAttribute="bottom" constant="399" id="TtY-fO-aPT"/>
+                            <constraint firstItem="gqD-Jy-jJS" firstAttribute="top" secondItem="Sbb-lH-Fcd" secondAttribute="top" id="Vb9-v0-vwo"/>
                             <constraint firstItem="lIn-Ha-F9b" firstAttribute="leading" secondItem="Sbb-lH-Fcd" secondAttribute="leading" constant="25" id="glD-uI-Zn7"/>
-                            <constraint firstItem="p2C-Ef-8of" firstAttribute="top" secondItem="Sbb-lH-Fcd" secondAttribute="top" id="vku-B9-rEn"/>
-                            <constraint firstItem="Sbb-lH-Fcd" firstAttribute="trailing" secondItem="p2C-Ef-8of" secondAttribute="trailing" constant="25" id="yLb-aL-NEH"/>
+                            <constraint firstItem="Sbb-lH-Fcd" firstAttribute="trailing" secondItem="Cyx-w3-oxN" secondAttribute="trailing" constant="25" id="qnf-cN-OL7"/>
+                            <constraint firstItem="Sbb-lH-Fcd" firstAttribute="trailing" secondItem="gqD-Jy-jJS" secondAttribute="trailing" constant="25" id="v91-ky-P2q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZgQ-wm-VlG"/>
                     <connections>
-                        <outlet property="fotoPlayer" destination="mdc-iU-sBh" id="QYf-7c-AuN"/>
+                        <outlet property="fotoPlayer" destination="Cyx-w3-oxN" id="Z6u-8m-jy2"/>
                         <outlet property="labelPlayer" destination="lIn-Ha-F9b" id="F9v-Wn-hxM"/>
-                        <outlet property="teamLogo" destination="p2C-Ef-8of" id="TY9-Pj-d1V"/>
+                        <outlet property="teamLogo" destination="gqD-Jy-jJS" id="FCo-Al-RbD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXt-ya-Z6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1240.5797101449277" y="37.5"/>
+            <point key="canvasLocation" x="1240" y="36.96682464454976"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uNs-hT-CBr">
