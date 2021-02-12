@@ -9,19 +9,18 @@ import UIKit
 
 class playersNBAViewController: UITableViewController {
     
-    let playerNBA = ["ADEBAYO BAM", "ANTETOKOUNMPO GIANNIS", "BEAL BRADLEY", "BROWN JAYLEN", "BUTLER JIMMY",
+    var playerNBA = ["ADEBAYO BAM", "ANTETOKOUNMPO GIANNIS", "BEAL BRADLEY", "BROWN JAYLEN", "BUTLER JIMMY",
                      "DURANT KEVIN", "EMBIID JOEL", "GRANT JERAMI", "HARDEN JAMES", "HAYWARD GORDON",
                      "IRVING KYRIE", "LAVINE ZACH", "RANDLE JULIUS", "ROSE DERRICK", "SABONIS DOMANTAS",
                      "SEXTON COLLIN", "SIMMONS BEN", "TATUM JAYSON", "WESTBROOK RUSSELL", "YOUNG TRAE"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Выбор между презентациями
-        // self.clearsSelectionOnViewWillAppear = false
-
+        
+        playerNBA.shuffle()
+        
         // Отобразить кнопку Редактирования на панели навигации для этого контроллера вида.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     //Позволяет задать количество секций (серенькие)
@@ -39,7 +38,7 @@ class playersNBAViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerNBA", for: indexPath)
         
         cell.textLabel?.text = playerNBA[indexPath.row]
-        cell.textLabel?.numberOfLines = 0                               //Сняли ограничение на количество строк в Label
+        //cell.textLabel?.numberOfLines = 0                               //Сняли ограничение на количество строк в Label
         cell.imageView?.image = UIImage(named: playerNBA[indexPath.row])
         
         return cell
@@ -54,7 +53,7 @@ class playersNBAViewController: UITableViewController {
     // Получить новый контроллер представления, используя переход.место назначения.
     // Передать выбранный объект новому контроллеру вида.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //indexPathForSelectedRow берет индек у выделенной ячейки (опционал)
+        //indexPathForSelectedRow берет индекc у выделенной ячейки (опционал)
         if let indexPath = tableView.indexPathForSelectedRow {
             if segue.identifier == "goToAbout" {
                 let aboutVC = segue.destination as? AboutVC
@@ -62,6 +61,19 @@ class playersNBAViewController: UITableViewController {
             }
         }
     }
+    
+    //Метод для перетаскивания ячеек. sourceIndexPath - откуда удаляем. destinationIndexPath - строка назначения, куда.
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let currentPlayer = playerNBA.remove(at: sourceIndexPath.row)
+        playerNBA.insert(currentPlayer, at: destinationIndexPath.row)
+        tableView.reloadData()                                                  //перезагрузка таблицы (что бы результат был виден)
+    }
+        
+    //Для стиля (удаляем delete)  <- )))))
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return.none
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

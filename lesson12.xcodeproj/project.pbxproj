@@ -39,6 +39,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		804F000825D706A600513EC5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				80CCF43625D6A4E200680E0C /* playersNBAViewController.swift */,
+				80CCF43925D6BAF400680E0C /* AboutVC.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		804F000A25D706D900513EC5 /* system32 */ = {
+			isa = PBXGroup;
+			children = (
+				80DE1ADE25D690C000059E3E /* Info.plist */,
+				80DE1ADB25D690C000059E3E /* LaunchScreen.storyboard */,
+				80DE1AD925D690C000059E3E /* Assets.xcassets */,
+				80DE1AD225D690BF00059E3E /* SceneDelegate.swift */,
+				80DE1AD025D690BF00059E3E /* AppDelegate.swift */,
+			);
+			path = system32;
+			sourceTree = "<group>";
+		};
 		80DE1AC425D690BF00059E3E = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +79,9 @@
 		80DE1ACF25D690BF00059E3E /* lesson12 */ = {
 			isa = PBXGroup;
 			children = (
-				80DE1AD025D690BF00059E3E /* AppDelegate.swift */,
-				80DE1AD225D690BF00059E3E /* SceneDelegate.swift */,
 				80DE1AD625D690BF00059E3E /* Main.storyboard */,
-				80DE1AD925D690C000059E3E /* Assets.xcassets */,
-				80DE1ADB25D690C000059E3E /* LaunchScreen.storyboard */,
-				80DE1ADE25D690C000059E3E /* Info.plist */,
-				80CCF43625D6A4E200680E0C /* playersNBAViewController.swift */,
-				80CCF43925D6BAF400680E0C /* AboutVC.swift */,
+				804F000825D706A600513EC5 /* ViewController */,
+				804F000A25D706D900513EC5 /* system32 */,
 			);
 			path = lesson12;
 			sourceTree = "<group>";
@@ -292,7 +308,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 879U287R5Q;
-				INFOPLIST_FILE = lesson12/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/lesson12/system32/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 879U287R5Q;
-				INFOPLIST_FILE = lesson12/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/lesson12/system32/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
