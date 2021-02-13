@@ -11,12 +11,6 @@ class FirstVC: UITableViewController {
     
     var persons = Person.createRandomPerson()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-    
     //Позволяет задать количество строк в таблице (count элементов массива задает количество строк)
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return persons.count
@@ -43,23 +37,4 @@ class FirstVC: UITableViewController {
             aboutVC?.person = persons[indexPath.row]
         }
     }
-    
-    //Метод для перетаскивания ячеек. sourceIndexPath - откуда удаляем. destinationIndexPath - строка назначения, куда.
-    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let currentPerson = persons.remove(at: sourceIndexPath.row)
-        persons.insert(currentPerson, at: destinationIndexPath.row)
-        tableView.reloadData() //перезагрузка таблицы (что бы результат был виден)
-    }
-    
-    //Для стиля (удаляем delete)  <- )))))
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return.none
-    }
-    
-    /*
-    //Позволяет задать высоту ячейки (к примеру что бы картинка была не огромной)
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    */
 }

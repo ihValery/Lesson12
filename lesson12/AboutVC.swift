@@ -20,7 +20,7 @@ class AboutVC: UIViewController {
         super.viewDidLoad()
         
         title = person.name + " " + person.surName
-        avatar.image = UIImage(named: String(UInt.random(in: 0...13)))
+        avatar.image = UIImage(named: String(person.avatar))
         emailLabel.text = "Email:       \(person.email)"
         phoneNumberLabel.text = "Phone:     \(person.phoneNumber)"
     }
