@@ -9,11 +9,7 @@ import UIKit
 
 class SecondVC: UITableViewController {
     
-    var persons = Person.createRandomPerson()
-    
-    override func viewDidLoad() {
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+    let persons = Person.createRandomPerson()
 
     //Позволяет задать количество секций (серенькие)
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -30,31 +26,15 @@ class SecondVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
-    
-    /*
-    //Позволяет задать высоту ячейки (к примеру что бы картинка была не огромной)
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    */
  
+    //Настройка ячейки (Предоставьте объект ячейки для каждой строки) (сравниваем с работой цикла for-in)
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let person = persons[indexPath.section]
-        cell.textLabel?.text = (indexPath.section == 0 ? person.email : person.phoneNumber)
-        return cell
-    }
-    
-    //Метод для перетаскивания ячеек. sourceIndexPath - откуда удаляем. destinationIndexPath - строка назначения, куда.
-    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let currentPerson = persons.remove(at: sourceIndexPath.row)
-        persons.insert(currentPerson, at: destinationIndexPath.row)
-        tableView.reloadData() //перезагрузка таблицы (что бы результат был виден)
+        let emailLabel = "Email:       \(person.email)"
+        let phoneLabel = "Phone:     \(person.phoneNumber)"
         
-    }
-    
-    //Для стиля (удаляем delete)  <- )))))
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return.none
+        cell.textLabel?.text = indexPath.row == 0 ? emailLabel : phoneLabel
+        return cell
     }
 }

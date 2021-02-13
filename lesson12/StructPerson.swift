@@ -9,6 +9,7 @@ import Foundation
 
 struct Person {
     
+    let avatar: Int
     let name: String
     let surName: String
     let email: String
@@ -17,13 +18,15 @@ struct Person {
     static func createRandomPerson() -> [Person] {
         var personS: [Person] = []
         
+        let iAvatar = DataPerson.sharedInstance.avatar
         let iName = DataPerson.sharedInstance.name
         let iSurName = DataPerson.sharedInstance.surName
         let iEmail = DataPerson.sharedInstance.email
         let iPhoneNumber = DataPerson.sharedInstance.phoneNumber
         
         for index in 0..<iName.count {
-            let onePerson = Person(name: iName[index],
+            let onePerson = Person(avatar: iAvatar[index],
+                                   name: iName[index],
                                    surName: iSurName[index],
                                    email: iEmail[index],
                                    phoneNumber: iPhoneNumber[index])
