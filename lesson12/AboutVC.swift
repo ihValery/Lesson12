@@ -21,7 +21,7 @@ class AboutVC: UIViewController {
         
         title = person.name + " " + person.surName
         avatar.image = UIImage(named: String(person.avatar))
-        emailLabel.text = "Email:       \(person.email)"
-        phoneNumberLabel.text = "Phone:     \(person.phoneNumber)"
+        emailLabel.text = "Email:        \(person.email)"
+        phoneNumberLabel.text = "Phone:      \(person.phoneNumber)"
     }
 }
