@@ -13,7 +13,7 @@ class DataPerson {
     //Когда мы определяем любую переменную как статическую, она прикрепляется к классу, а не к объекту.
     static let sharedInstance = DataPerson()
     
-    var avatar = Array(1...13)
+    var avatar = Array(1...13).shuffled()
     
     var name = ["Tommy", "Judah", "Tomas", "Prince", "Nickolas", "Mekhi", "Brycen",
                 "Caleb", "Devon", "Dwayne", "Israel", "Talon"].shuffled()
