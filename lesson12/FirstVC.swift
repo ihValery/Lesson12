@@ -15,7 +15,7 @@ class FirstVC: UITableViewController {
         tableView.tableFooterView = UIView()
     }
     
-    var persons = Person.createRandomPerson()
+    var persons = Person.createRandomPerson().sorted(by: { $0.name < $1.name })
     
     //Позволяет задать количество строк в таблице (count элементов массива задает количество строк)
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,6 +28,8 @@ class FirstVC: UITableViewController {
         let tempIndex = persons[indexPath.row]
         cell.textLabel?.text = tempIndex.name + " " + tempIndex.surName
         cell.imageView?.image = UIImage(named: String(tempIndex.avatar))
+        //Размер title в ячейке
+        //cell.textLabel?.font = UIFont(descriptor: .init(), size: 20)
         
         return cell
     }
