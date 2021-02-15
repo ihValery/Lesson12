@@ -18,7 +18,11 @@ class AboutVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        creatAboutCard()
+    }
+    
+    func creatAboutCard() {
         title = person.name + " " + person.surName
         avatar.image = UIImage(named: String(person.avatar))
         emailLabel.text = "Email:        \(person.email)"

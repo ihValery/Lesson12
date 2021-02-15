@@ -9,6 +9,12 @@ import UIKit
 
 class FirstVC: UITableViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //Убираем лишнюю разлиновку в таблице
+        tableView.tableFooterView = UIView()
+    }
+    
     var persons = Person.createRandomPerson()
     
     //Позволяет задать количество строк в таблице (count элементов массива задает количество строк)
