@@ -9,29 +9,23 @@ import UIKit
 
 class AboutVC: UIViewController {
     
-    @IBOutlet weak var fotoPlayer: UIImageView!
-    @IBOutlet weak var labelPlayer: UILabel!
-    @IBOutlet weak var teamLogo: UIImageView!
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
     
-    var playerName: String!
-    var itemLogo: String!
-    
+    //Мы сюда перейдем при условии что person будет
+    var person: Person!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setDesignCard()
+
+        creatAboutCard()
     }
     
-    func setDesignCard() {
-        let suffixLogo = " logo"
-
-        itemLogo = playerName + suffixLogo
-        teamLogo.image = UIImage(named: itemLogo)
-        
-        fotoPlayer.image = UIImage(named: playerName)
-        labelPlayer.text = playerName
-        labelPlayer.numberOfLines = 0
-        
-        //title = playerName
+    func creatAboutCard() {
+        title = person.name + " " + person.surName
+        avatar.image = UIImage(named: String(person.avatar))
+        emailLabel.text = "Email:        \(person.email)"
+        phoneNumberLabel.text = "Phone:      \(person.phoneNumber)"
     }
 }
